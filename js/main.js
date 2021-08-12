@@ -26,6 +26,7 @@
 						topRight.style.backgroundImage = `url(images/topRight${this.dataset.imageref}.jpg)`;
 						bottomRight.style.backgroundImage = `url(images/bottomRight${this.dataset.imageref}.jpg)`;
 						//debugger;
+
 }
 
 	function startDrag(event) {
@@ -57,15 +58,18 @@
 
 
 
-        var buttons = document.getElementsById('');
-        for (var i = 0; i < buttons.length; i++) {
-            buttons[i].drop = function() {
-                dragImages.width = dragImages.naturalWidth * "100%";
-                dragImages.height = dragImages.naturalHeight * "100%";}
+			  //if ( targetImage == target.id) {
+			 	//			target.appendChild(document.getElementById(targetImage));
+			  //}
+			  //else {
+			  //}
 }
 
+//function buttonHolder () {
+//	var element = document.getElementByClass("puzzle-pieces");
+//	element.classList.remove("puzzle-image")
+//	}
 
-	}
 
 	// event handling at the bottom
 dragImages.forEach(piece => piece.addEventListener('dragstart', startDrag));
