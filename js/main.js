@@ -21,6 +21,10 @@
 
 						//2. set the background image of the dropcontainer
 						dropContainer.style.backgroundImage = `url(images/backGround${this.dataset.imageref}.jpg)`;
+						topLeft.style.backgroundImage = `url(images/topLeft${this.dataset.imageref}.jpg)`;
+						bottomLeft.style.backgroundImage = `url(images/bottomLeft${this.dataset.imageref}.jpg)`;
+						topRight.style.backgroundImage = `url(images/topRight${this.dataset.imageref}.jpg)`;
+						bottomRight.style.backgroundImage = `url(images/bottomRight${this.dataset.imageref}.jpg)`;
 						//debugger;
 }
 
@@ -29,7 +33,7 @@
 
 				//save a reference to the element the user is dragging
 				//so that we can retrieve the element later and put it in a drop zone
-				event.dataTransfer.setData ("dragTarget", this.id); //MDN drag and drop reference
+				event.dataTransfer.setData ("dragTarget", event.target.id); //MDN drag and drop reference
 				debugger;
 	}
 
@@ -50,6 +54,17 @@
 				// add it to the zone we dropped the image on
 				this.appendChild(targetImage);
 				debugger;
+
+
+
+        var buttons = document.getElementsById('');
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].drop = function() {
+                dragImages.width = dragImages.naturalWidth * "100%";
+                dragImages.height = dragImages.naturalHeight * "100%";}
+}
+
+
 	}
 
 	// event handling at the bottom
